@@ -1,14 +1,13 @@
-
-
-public class SongList {
-	
+public class SongList {	
 	private SongNode head; 
 	private SongNode tail;
+	
 	//Constructor
 	public SongList(){
 		head = null;
 		tail = null;
 	}
+	
 	//Getters and setters
 	public SongNode head(){
 		return this.head;
@@ -27,21 +26,22 @@ public class SongList {
 	}
 	
 	// inserts a SongNode at the front of a LinkedList
-	public void insertAtFront (String a, String b, String c){
-		
+	public void insertAtFront (String a, String b, String c){	
 		SongNode sn = new SongNode(a, b, c);
+		
 		if (head != null) {
 			sn.setNext(head);
-		}
-		else {
+		} else {
 			tail = sn;
 		}
+		
 		head = sn;
 	}
 	
 	//adds a SongNode to the back of a LinkedList
 	public void append (String a, String b, String c, SongNode n){
 		SongNode sn = new SongNode(a, b, c, n);
+		
 		if (tail != null){
 			tail.setNext(sn);
 			tail = sn;
@@ -53,10 +53,12 @@ public class SongList {
 	//prints all the nodes in the LinkedList
 	public void printNodes(){
 		SongNode curr = head;
+		
 		while (curr != null){
 			System.out.println(curr.getTitle() + ", " + curr.getArtist());
 			curr = curr.next();
 		}
+		
 		System.out.println();
 	}
 	
@@ -70,6 +72,7 @@ public class SongList {
 			c++;
 			curr = curr.next();
 		}
+		
 		if (c == i){
 			curr.setArtist(a);
 			curr.setTitle(b);

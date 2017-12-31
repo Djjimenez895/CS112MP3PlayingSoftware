@@ -1,6 +1,5 @@
 
 public class SongNode implements Comparable<SongNode>{
-	
 	private String artist; 
 	private String title;
 	private String filename;
@@ -78,9 +77,8 @@ public class SongNode implements Comparable<SongNode>{
 				
 				return 1; //this means that the title of the first object is in front of the second object
 			}
+		}
 		
-		}
 		return 0;
-		}
-	
+	}
 }
