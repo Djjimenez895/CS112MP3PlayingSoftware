@@ -1,2 +1,6 @@
-# CS112MP3PlayingSoftware
-A simple MP3 software made for a Computer Science class with an emphasis on Java
+# MP3 Playing Software
+
+## Description
+A simple MP3 software made with Core Java, JAudioTagger, and Java Swing.
+
+## Usage
