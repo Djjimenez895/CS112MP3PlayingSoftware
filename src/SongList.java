@@ -1,14 +1,20 @@
+/*
+ * File: SongList.java
+ * 
+ * Description: SongList.java contains methods for a custom LinkedList object. 
+ * Each individual "node" in the LinkedList is a SongNode object (See SongNode.java for details). 
+ */
 public class SongList {	
 	private SongNode head; 
 	private SongNode tail;
 	
-	//Constructor
+	// Constructor
 	public SongList(){
 		head = null;
 		tail = null;
 	}
 	
-	//Getters and setters
+	// Getters and setters
 	public SongNode head(){
 		return this.head;
 	}
@@ -25,9 +31,19 @@ public class SongList {
 		tail = n;
 	}
 	
-	// inserts a SongNode at the front of a LinkedList
-	public void insertAtFront (String a, String b, String c){	
-		SongNode sn = new SongNode(a, b, c);
+	/*  
+	Method: insertAtFront(String artist, String title, String filename) <--- Double check args
+	Argument(s): String artist - artist of song
+			     String title - title of song
+			     String filename - actual name of file in directory
+	Return value(s): None
+	
+	Description: This method inserts a SongNode at the front of a LinkedList.
+	Purpose: This method makes it easier to insert when we know that a node must go
+	in the front of a LinkedList. 
+	*/
+	public void insertAtFront(String artist, String title, String filename){	
+		SongNode sn = new SongNode(artist, title, filename);
 		
 		if (head != null) {
 			sn.setNext(head);
@@ -38,19 +54,38 @@ public class SongList {
 		head = sn;
 	}
 	
-	//adds a SongNode to the back of a LinkedList
-	public void append (String a, String b, String c, SongNode n){
-		SongNode sn = new SongNode(a, b, c, n);
+	/* 
+	Method: append(String artist, String title, String filename, SongNode n)
+	Argument(s): String artist - artist of song
+				 String title - title of song
+			     String filename - actual name of file in directory
+	Return value(s): None
+	
+	Description: This method adds a SongNode to the back of the LinkedList.
+	Purpose: This method makes it easier to insert at the end when we know that
+	the node must go at the end, while also adjusting the tail and possibly the head
+	accordingly. 
+	*/
+	public void append(String artist, String title, String filename, SongNode n){
+		SongNode sn = new SongNode(artist, title, filename, n);
 		
 		if (tail != null){
 			tail.setNext(sn);
 			tail = sn;
 		} else {
-			head = tail = sn;
+			head = tail = sn; // If there isn't a tail, then we know the LinkedList is empty
 		}
 	}
 	
-	//prints all the nodes in the LinkedList
+	/*
+	Method: printNodes()
+	Argument(s): None
+	Return value(s): None
+	
+	Description: This method prints all the nodes in the LinkedList to the console. More 
+	specifically, it prints the title and artist for each song 
+	Purpose: This is here for debugging purposes.
+	 */
 	public void printNodes(){
 		SongNode curr = head;
 		
@@ -62,31 +97,30 @@ public class SongList {
 		System.out.println();
 	}
 	
+	/*
+	Method: set(int node_index, String artist, String title, String filename)
+	Argument(s): String artist - artist of song
+				 String title - title of song
+			     String filename - actual name of file in directory
+	Return value(s): None
 	
-	//Changes the values of a SongNode at a specific part of the LinkedList
-	public void set (int i, String a, String b, String d){
-		SongNode curr = head;
-		int c = 0;
+	Description: This method changes the value of a specific SongNode at a specific
+	part of the LinkedList.
+	Purpose: 
+	 */
+	public void set(int node_index, String artist, String title, String filename){
+		SongNode curr = head; // Start of the LinkedList
+		int c = 0; // Counter
 		
-		while (c < i && curr.next() != null && curr != null){
+		while (c < node_index && curr.next() != null && curr != null){
 			c++;
 			curr = curr.next();
 		}
 		
-		if (c == i){
-			curr.setArtist(a);
-			curr.setTitle(b);
-			curr.setFilename(d);
+		if (c == node_index){
+			curr.setArtist(artist);
+			curr.setTitle(title);
+			curr.setFilename(filename);
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-		
-	
-	
 }
