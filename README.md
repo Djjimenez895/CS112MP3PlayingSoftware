@@ -10,6 +10,7 @@ The MP3 Software contains a few basic features:
 1) Load MP3 Files into the software - The load button allows a user to choose a directory to import music from. 
 ![screenshot](mp3_loading_screenshot.PNG)
 2) Search functionality - Once a list of songs is loaded in, the user can search for a specific songs  using the search box. The software will search for any song name that starts with the word(s) that the user typed. 
+![screenshot](searching_screenshot.PNG)
 3) Play - This button plays the chosen MP3
 4) Stop - This stops the current song that is playing
 5) Exit - Exits the program
