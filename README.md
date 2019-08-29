@@ -12,8 +12,11 @@ The MP3 Software contains a few basic features:
 2) Search functionality - Once a list of songs is loaded in, the user can search for a specific songs  using the search box. The software will search for any song name that starts with the word(s) that the user typed. 
 ![screenshot](searching_screenshot.PNG)
 3) Play - This button plays the chosen MP3
+![screenshot](play_button.PNG)
 4) Stop - This stops the current song that is playing
+![screenshot](stop_button.PNG)
 5) Exit - Exits the program
+![screenshot](exit_button.PNG)
 
 ## Limitations
 Currently, this only works on MP3 files.
