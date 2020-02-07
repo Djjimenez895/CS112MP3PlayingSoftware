@@ -23,5 +23,5 @@ public class Driver {
 	    frame.add (panel);
 	    frame.pack();
 	    frame.setVisible(true);
-	}
+    }
 }
