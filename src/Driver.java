@@ -1,7 +1,6 @@
 import java.awt.Dimension;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
 import javax.swing.JFrame;
 
 /*
