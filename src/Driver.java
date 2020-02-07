@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 */
 
 public class Driver {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 	    Path path = Paths.get("mp3"); // Path where the files will come from
 	    JFrame frame = new JFrame ("Mp3 player");
 	    frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
